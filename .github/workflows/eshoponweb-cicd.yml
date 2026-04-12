@@ -5,10 +5,10 @@ on: [push, workflow_dispatch]
 
 #Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
 env:
-  RESOURCE-GROUP: rg-eshoponweb-Khatri
+  RESOURCE-GROUP: rg-eshoponweb-NAME
   LOCATION: northeurope
   TEMPLATE-FILE: infra/webapp.bicep
-  SUBSCRIPTION-ID: fcb4f051-c7c2-48e7-b588-722cd4cb9075
+  SUBSCRIPTION-ID: 93db9e64-9b04-465c-949c-6794fc5a5338
   WEBAPP-NAME: eshoponweb-webapp-khatri
 
 jobs:
@@ -62,7 +62,7 @@ jobs:
           name: .net-app
           path: .net-app
 
-      #Download the bicep templates from previous job
+      #Download the bicep templates from previous jobJBJ
       - name: Download artifact from build job
         uses: actions/download-artifact@v6
         with:
